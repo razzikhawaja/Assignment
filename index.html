@@ -36,8 +36,7 @@
   </section>
 
   <section id="job-listing">
-                          <!-- Items Start -->
-    <div class="item">
+    <div class="item" data-role="frontend" data-level="senior" data-languages="javascript" data-tools="react">
         <img class="item-image" src="images/photosnap.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -62,9 +61,12 @@
         <button type="button" name="Language">CSS</button>
         <button type="button" name="Language">JavaScript</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="fullstack" data-level="midweight" data-languages="python" data-tools="react">
       <img class="item-image" src="images/manage.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -88,9 +90,12 @@
         <button type="button" name="Language">Python</button>
         <button type="button" name="Tool">React</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="react">
       <img class="item-image" src="images/account.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -114,9 +119,12 @@
         <button type="button" name="Tool">React</button>
         <button type="button" name="Tool">Sass</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item"  data-role="frontend" data-level="junior" data-languages="css" data-tools="javascript">
       <img class="item-image" src="images/myhome.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -138,9 +146,12 @@
         <button type="button" name="Language">CSS</button>
         <button type="button" name="Language">JavaScript</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="fullstack" data-level="midweight" data-languages="javascript" data-tools="ruby">
       <img class="item-image" src="images/loop-studios.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -163,9 +174,12 @@
         <button type="button" name="Language">Ruby</button>
         <button type="button" name="Tool">Sass</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="backend" data-level="junior" data-languages="ruby" data-tools="ror">
       <img class="item-image" src="images/faceit.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -187,9 +201,12 @@
         <button type="button" name="Language">Ruby</button>
         <button type="button" name="Tool">RoR</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="frontend" data-level="junior" data-languages="html" data-tools="javascript">
       <img class="item-image" src="images/shortly.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -212,9 +229,12 @@
         <button type="button" name="Language">JavaScript</button>
         <button type="button" name="Tool">Sass</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="vue">
       <img class="item-image" src="images/insure.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -237,9 +257,12 @@
         <button type="button" name="Tool">Vue</button>
         <button type="button" name="Tool">Sass</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="fullstack" data-level="midweight" data-languages="javascript" data-tools="python">
       <img class="item-image" src="images/eyecam-co.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -262,9 +285,12 @@
         <button type="button" name="Language">Python</button>
         <button type="button" name="Tool">Django</button>
       </div>
+      <div>
+        <button class="delete-button">Delete</button>
+      </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="react">
       <img class="item-image" src="images/the-air-filter-company.svg" alt="Photosnap">
       <div class="item-info">
         <div class="item-name">
@@ -287,10 +313,43 @@
         <button type="button" name="Tool">React</button>
         <button type="button" name="Tool">Sass</button>
       </div>
+      <div>
+      <button class="delete-button">Delete</button>
+    </div>
     </div>
 
   </section>
-
+  <div id="job-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" id="close-popup">X</span>
+      <h2 id="popup-job-title">Job Title</h2>
+      <p id="popup-job-company">Company Name</p>
+      <p id="popup-job-post">Job Position</p>
+      <p id="popup-job-details">Job Details</p>
+    </div>
+  </div>
+  
+  <button id="add-job-button" class="add-button">+ Add</button>
+  <div id="add-job-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" id="close-add-job-popup">X</span>
+      <h2>Add New Job</h2>
+      <form id="job-form">
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" required>
+        <label for="comp-name">Company Name:</label>
+        <input type="text" id="comp-name" required>
+        <label for="job-pos">Job Position:</label>
+        <input type="text" id="job-pos" required>
+        <label for="job-details">Job Details:</label>
+        <input type="text" id="job-details" required>
+          
+        <button type="submit" id="add-job-submit">Add Job</button>
+      </form>
+    </div>
+  </div>
+  
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
