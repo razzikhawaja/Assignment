@@ -94,15 +94,28 @@ $(document).ready(function () {
   });
   $("#job-form").on("submit", function (e) {
     e.preventDefault();
+  
     var newJobTitle = $("#job-title").val();
-    if (newJobTitle) {
+    var newCompanyName = $("#comp-name").val();
+    var newJobPosition = $("#job-pos").val();
+    var newJobDetails = $("#job-details").val();
+  
+    if (newJobTitle && newCompanyName && newJobPosition && newJobDetails) {
       var newJobListing =
         '<div class="item">' +
-        "</div>";
+        '<div class="item-info">' +
+        '<div class="item-name">' + newJobTitle + '</div>' +
+        '<div class="item-post">' + newJobPosition + '</div>' +
+        '<div class="item-details">' + newCompanyName + '</div>' +
+        '</div>' +
+        '<button class="delete-button">Delete</button>' +
+        '</div>';
+  
       $("#job-listing").append(newJobListing);
       $("#add-job-popup").css("display", "none");
     }
   });
+  
 
   // Deletion
   $(".delete-button").on("click", function () {
